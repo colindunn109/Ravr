@@ -8,7 +8,11 @@
 
                <div class="col-md-12 col-sm-12">
                     <h1>Welcome to Ravr</h1>
-                    <h4>A gathering place for all EDM lovers</h4> <!--TODO: Work on the tag line -->
+                    {% if user.is_authenticated %}
+                      <h4>Good to see you, {{ user.username }}!</h4>
+                    {% else %}
+                      <h4>A gathering place for all EDM lovers</h4> <!--TODO: Work on the tag line -->
+                    {% endif %}
                     <a href="#blog" class="smoothScroll btn btn-default">Discover</a>
                </div>
 
