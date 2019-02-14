@@ -16,7 +16,7 @@ body {
 
 
 /*---------------------------------------
-    Typorgraphy
+    Typography
 -----------------------------------------*/
 
 h1,h2,h3,h4,h5,h6 {
@@ -280,12 +280,12 @@ a:hover, a:active, a:focus {
 }
 
 .main-home {
-  background-image: url('../images/EDC.jpg') no-repeat; /*TODO FIX THIS DUMB BUG */
+  background-image: url('static/images/EDC.jpg') no-repeat;
   height: 100vh;
 }
 
 .main-about {
-  background-image: url('../images/EDC.jpg') no-repeat; /*TODO FIX THIS DUMB BUG */
+  background-image: url('../images/EDC.jpg') no-repeat;
 }
 
 .main-single-post {

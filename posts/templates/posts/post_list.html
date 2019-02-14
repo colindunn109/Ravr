@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<style>
+  .main-about{
+    background-image: url( "{% static 'images/rave1.jpg' %}");
+  }
+</style>
+  <section id="home" class="main-about parallax-section">
+       <div class="overlay"></div>
+       <div class="container">
+            <div class="row">
+                 <div class="col-md-12 col-sm-12">
+                      <h1>Discover</h1>
+                 </div>
+            </div>
+       </div>
+  </section>
+  <div class="container">
+    <div class="list-group">
+      {% for post in post_list  %}
+        <button type="button" class="list-group-item list-group-item-action">
+          <a href="#"> <!-- TODO: Fix URL to map to detail view -->
+          <h3>{{ post.title }}</h3>
+          <p>Author: {{ post.author }}</p>
+          <p>{{ post.created_at }}</p>
+          <p>{{ post.rating }}</p>
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

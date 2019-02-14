@@ -12,6 +12,7 @@ urlpatterns = [
     path('about/', views.AboutPage.as_view(),name="aboutpage"),
     path('test/', views.TestPage.as_view(),name="testpage"),
     path('thanks/', views.ThanksPage.as_view(), name="thankspage"),
+    path('posts/', include('posts.urls',namespace='posts')),
 ]
 
 # if settings.DEBUG:
