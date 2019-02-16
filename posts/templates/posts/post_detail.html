@@ -3,5 +3,15 @@
   <div class="container">
     <h1>{{ post.title }}</h1>
     <p>{{ post.content }}</p>
+    <br/>
+    {% for comment in post.comments.all %}
+      <div class="comment">
+          <div class="date">{{ comment.created_date }}</div>
+          <strong>{{ comment.author }}</strong>
+          <p>{{ comment.text|linebreaks }}</p>
+      </div>
+    {% empty %}
+      <p>No comments here yet :(</p>
+    {% endfor %}
   </div>
 {% endblock %}

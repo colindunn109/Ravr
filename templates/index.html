@@ -19,7 +19,13 @@
                     {% else %}
                       <h4>A gathering place for all EDM lovers</h4> <!--TODO: Work on the tag line -->
                     {% endif %}
-                    <a href="{% url 'posts:postlist'%}" class="smoothScroll btn btn-default">Discover</a>
+                    {% if user.is_authenticated %}
+                      <a href="{% url 'posts:postlist'%}" class="smoothScroll btn btn-default">Discover</a>
+                    {% else %}
+                      <a href="{% url 'accounts:login'%}" class="smoothScroll btn btn-default">Login</a>
+                      <br/>
+                      <a href="{% url 'accounts:signup'%}" class="smoothScroll btn btn-default">Signup</a>
+                    {% endif %}
                </div>
 
           </div>

@@ -11,6 +11,7 @@ class Post(models.Model):
     content = models.TextField(default = "")
     created_at = models.DateTimeField(auto_now = True)
     rating = models.IntegerField(default=1)
+    link = models.URLField(blank=True)
     '''
     Maybe also add genre for a discover page
     so we can sort by multiple criteria for users to find what they want
