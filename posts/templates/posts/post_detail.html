@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="container">
-    <h1>{{ post.title }}</h1>
+    {% if post.link %}
+      <h1><a href="{{ post.link }}">{{ post.title }}</a></h1>
+    {% else %}
+      <h1>{{ post.title }}</h1>
+    {% endif %}
     <p>{{ post.content }}</p>
     <br/>
     {% for comment in post.comments.all %}
