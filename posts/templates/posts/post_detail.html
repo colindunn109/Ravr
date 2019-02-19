@@ -9,10 +9,10 @@
     <p>{{ post.content }}</p>
     <br/>
     {% for comment in post.comments.all %}
-      <div class="comment">
-          <div class="date">{{ comment.created_date }}</div>
+      <div class="container">
+          <p>{{ comment.created_date }}</p>
           <strong>{{ comment.author }}</strong>
-          <p>{{ comment.text|linebreaks }}</p>
+          <p>{{ comment.content }}</p>
       </div>
     {% empty %}
       <p>No comments here yet :(</p>
